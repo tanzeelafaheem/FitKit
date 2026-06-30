@@ -11,28 +11,9 @@ import authMiddleware from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.post(
-  "/",
-  authMiddleware,
-  addWorkout
-);
-
-router.get(
-  "/",
-  authMiddleware,
-  getWorkouts
-);
-
-router.put(
-  "/:id",
-  authMiddleware,
-  updateWorkout
-);
-
-router.delete(
-  "/:id",
-  authMiddleware,
-  deleteWorkout
-);
+router.post("/",authMiddleware,addWorkout);
+router.get("/",authMiddleware,getWorkouts);
+router.put("/:id",authMiddleware,updateWorkout);
+router.delete("/:id",authMiddleware,deleteWorkout);
 
 export default router;
