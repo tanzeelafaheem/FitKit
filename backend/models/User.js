@@ -40,6 +40,17 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+  bmiHistory: [
+      {
+        height: Number,
+        weight: Number,
+        bmi: Number,
+        date: {
+          type: Date,
+          default: Date.now,
+        },
+      },
+    ],
   },
   {
     timestamps: true,
